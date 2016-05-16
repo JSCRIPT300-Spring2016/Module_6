@@ -1,0 +1,25 @@
+{
+  "name": "module6",
+  "version": "1.0.0",
+  "description": "homework 6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JSCRIPT300-Spring2016/Module_6.git"
+  },
+  "author": "Owen Kelly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JSCRIPT300-Spring2016/Module_6/issues"
+  },
+  "homepage": "https://github.com/JSCRIPT300-Spring2016/Module_6#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.17",
+    "nodemon": "^1.9.2"
+  }
+}
