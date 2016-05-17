@@ -1,0 +1,24 @@
+{
+  "name": "module_6_sam_radakovitz",
+  "version": "1.0.0",
+  "description": "Week 6",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samradakovitz/Module_6.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samradakovitz/Module_6/issues"
+  },
+  "homepage": "https://github.com/samradakovitz/Module_6#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.17"
+  }
+}
