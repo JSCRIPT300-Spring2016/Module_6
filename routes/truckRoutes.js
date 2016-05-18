@@ -27,7 +27,7 @@ router.route( '/' )
 
 router.route( '/:truckId' )
   .get( function( request, response ) {
-  
+
     var truckId = request.params.truckId;
 
     Truck.findById( truckId, function( error, results ) {
@@ -50,20 +50,5 @@ router.route( '/:truckId' )
       }
     });
   });
-
-/*  NOT USED BY THIS APPLICATION
-app.route('/food-types')
-  .get(function (request, response) {
-    var foodList = trucks.getFoodTypes();
-    response.send(foodList);
-  });
-
-app.route('/food-types/:type')
-  .get(function (request, response) {
-    var foodType = request.params.type;
-    var truckList = trucks.filterByFoodType(foodType);
-    response.send(truckList);
-  });
-*/
 
 module.exports = router;
