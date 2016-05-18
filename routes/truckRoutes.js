@@ -27,6 +27,7 @@ router.route( '/' )
 
 router.route( '/:truckId' )
   .get( function( request, response ) {
+  
     var truckId = request.params.truckId;
 
     Truck.findById( truckId, function( error, results ) {
