@@ -1,0 +1,29 @@
+{
+  "name": "module_6",
+  "version": "1.0.0",
+  "description": "mongo db assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fushen16/Module_6.git"
+  },
+  "keywords": [
+    "mongodb",
+    "express",
+    "route"
+  ],
+  "author": "Fulin Shen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fushen16/Module_6/issues"
+  },
+  "homepage": "https://github.com/fushen16/Module_6#readme",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.16"
+  }
+}

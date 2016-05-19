@@ -1,3 +1,7 @@
+/*
+** updated by James on May 18, 2016
+*/
+
 $(function () {
 
   'use strict';
@@ -18,21 +22,12 @@ $(function () {
 
     e.preventDefault();
     var $form = $(this);
-    var truckData = {
-      name: $('[name=name]').val(),
-      type: foodTypes,
-      schedule: getSchedule(),
-      description: $('[name=description]').val(),
-      payment: getPaymentTypes(),
-      website: $('[name=website]').val(),
-      Facebook: $('[name=Facebook]').val(),
-      Twitter: $('[name=Twitter]').val()
-    };
+    var data = $form.serialize() + serializeFoodTypes();
 
     $.ajax({
       method: 'POST',
       url: '/trucks',
-      data: truckData
+      data: data
     })
     .done(function (truck) {
       var list = [];
@@ -41,6 +36,16 @@ $(function () {
       $form.trigger('reset');
     });
   });
+
+  function serializeFoodTypes() {
+    var typeString = '';
+
+    $('.foodType-list li').each(function (index, item) {
+      typeString += '&foodType=' + item.innerText;
+    });
+
+    return typeString;
+  }
 
   function getPaymentTypes() {
     var types = [];
