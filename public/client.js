@@ -18,21 +18,11 @@ $(function () {
 
     e.preventDefault();
     var $form = $(this);
-    var truckData = {
-      name: $('[name=name]').val(),
-      type: foodTypes,
-      schedule: getSchedule(),
-      description: $('[name=description]').val(),
-      payment: getPaymentTypes(),
-      website: $('[name=website]').val(),
-      Facebook: $('[name=Facebook]').val(),
-      Twitter: $('[name=Twitter]').val()
-    };
-
+	console.log( $form.serialize() );
     $.ajax({
       method: 'POST',
       url: '/trucks',
-      data: truckData
+      data: $form.serialize()
     })
     .done(function (truck) {
       var list = [];
@@ -69,6 +59,8 @@ $(function () {
   function addFoodType(type) {
 
     foodTypes.push(type);
+	console.log(foodTypes);
+	console.log('I am here');
     $('.foodType-list').append('<li>' + type + '</li>');
     $('[name=type]').val('');
   }
@@ -82,7 +74,7 @@ $(function () {
 
   $('#addFoodType').on('click', function (e) {
     var foodType = $('[name=type]').val();
-
+	console.log(foodType);
     addFoodType(foodType);
   });
 
