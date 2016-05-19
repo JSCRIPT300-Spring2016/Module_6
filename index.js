@@ -10,6 +10,7 @@ var truckRouter = require('./routes/truckRoutes');
 var foodTypeRouter = require('./routes/foodTypeRouter');
 
 var app = express();
+//var trucksDB = mongoose.connect('mongodb://localhost/foodTruckAPI');
 
 app.use(express.static('public'));
 app.use('/trucks', truckRouter);
