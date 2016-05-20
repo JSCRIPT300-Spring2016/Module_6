@@ -7,12 +7,17 @@
 </head>
 <body>
   <h1>Food Trucks</h1>
-  <h2>Add Food Trucks:</h2>
+  <h2 id="foodTruckHeader">Add Food Trucks:</h2>
   <form>
+	<fieldset>
+      <input type="radio" name="updateType" value="new" checked /> Add New Food Truck<br>
+      <input type="radio" name="updateType" value="edit"/> Edit existing Food Truck<br>
+	</fieldset>
     <fieldset>
-      <legend>New Food Truck:</legend>
+      <legend id="foodTruckLegend">New Food Truck:</legend>
       <div class="form_input">
         <input type="text" name="name" placeholder="Name" />
+		<select hidden id="foodTruckChoices"></select>		
       </div>
       <div class="form_input">
         <textarea name="description" placeholder="description of the food truck..." rows="10" cols="50"></textarea>
