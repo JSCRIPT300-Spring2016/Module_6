@@ -8,7 +8,9 @@ $(function () {
     var list = [];
     if (truckList) {
       truckList.forEach(function (truck) {
-        list.push('<li><li><span class="delete_link" data-truck="' + truck._id + '">X</span><a href="/trucks/' + truck._id + '">' + truck.name + '</a></li>');
+        list.push('<li><li><span class="delete_link" data-truck="' +
+        truck._id + '">X</span><a href="/trucks/' + truck._id + '">' +
+        truck.name + '</a></li>');
       });
       $('.trucks-list').append(list);
     }
@@ -27,7 +29,9 @@ $(function () {
     })
     .done(function (truck) {
       var list = [];
-      list.push('<li><span class="delete_link" data-truck="' + truck._id + '">X</span><a href="/trucks/' + truck._id + '">' + truck.name + '</a></li>');
+      list.push('<li><span class="delete_link" data-truck="' + truck._id +
+      '">X</span><a href="/trucks/' + truck._id + '">' + truck.name +
+      '</a></li>');
       $('.trucks-list').append(list);
       $form.trigger('reset');
     });
@@ -41,30 +45,6 @@ $(function () {
     });
 
     return typeString;
-  }
-
-  function getPaymentTypes() {
-    var types = [];
-
-    $('[name=payment]').each(function () {
-      if (this.checked) {
-        types.push(this.value);
-      }
-    });
-
-    return types;
-  }
-
-  function getSchedule() {
-    var schedule = [];
-
-    $('[name=schedule]').each(function () {
-      if (this.checked) {
-        schedule.push(this.value);
-      }
-    });
-
-    return schedule;
   }
 
   function addFoodType(type) {
@@ -81,13 +61,13 @@ $(function () {
     }
   });
 
-  $('#addFoodType').on('click', function (e) {
+  $('#addFoodType').on('click', function () {
     var foodType = $('[name=type]').val();
 
     addFoodType(foodType);
   });
 
-  $('#clearFoodTypes').on('click', function (e) {
+  $('#clearFoodTypes').on('click', function () {
     $('.foodType-list').empty();
   });
 
@@ -99,7 +79,7 @@ $(function () {
 
     $.ajax({
       method: 'DELETE',
-      url: '/trucks/' + $target.data('truck'),
+      url: '/trucks/' + $target.data('truck')
     })
     .done(function () {
       $target.closest('li').remove();

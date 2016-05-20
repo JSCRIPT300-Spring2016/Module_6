@@ -12,7 +12,7 @@
     <fieldset>
       <legend>New Food Truck:</legend>
       <div class="form_input">
-        <input type="text" name="name" placeholder="Name" />
+        <input type="text" id="t_name" name="name" placeholder="Name" />
       </div>
       <div class="form_input">
         <textarea name="description" placeholder="description of the food truck..." rows="10" cols="50"></textarea>
@@ -20,10 +20,10 @@
     </fieldset>
     <fieldset>
       <legend>Food type:</legend>
-      <input type="text" name="type" placeholder="Add food type" />
+      <input type="text" id="foodType" name="type" placeholder="Add food type" />
       <button type="button" id="addFoodType">Add food type</button>
       <button type="button" id="clearFoodTypes">Clear list</button>
-      <ul class="foodType-list"></ul>
+      <ul class="foodType-list" id="foodList"></ul>
     </fieldset>
     <fieldset>
       <legend>Payment-types accepted:</legend>
@@ -83,7 +83,19 @@
         <input type="text" name="Twitter" placeholder="Twitter url" />
       </div>
     </fieldset>
-    <input type="submit" value="Add Food Truck" />
+    <input type="submit" value="Add Food Truck" onclick="Validation()"/>
+    <script>
+       function Validation() {
+         var name = document.getElementById("t_name").value;
+         var type = document.getElementById("foodList").firstChild;
+         if(name === '' || !type){
+           alert("Please enter a truck name and a food type!  One or both entries are missing. The truck name is now listed as MISSING! The food type is also listed as NONE! You may want to delete this entry and try again!");
+           document.getElementById("t_name").value = "MISSING!";
+           document.getElementById("foodType").value = "NONE!";
+           document.getElementById("addFoodType").click();
+         }
+       }
+    </script>
   </form>
   <h2>Food Truck list:</h2>
   <ul class="trucks-list"></ul>
