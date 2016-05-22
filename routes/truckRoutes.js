@@ -3,41 +3,70 @@
 var express = require('express');
 //var trucks = require('../foodTrucks');
 var router = express.Router();
+var Truck = require('../models/truckModel');
 
 
-//NEXT STEP REWRITE THESE AS MONGODB THINGIES. SEE SLIDE DECK!
+//NEXT STEP REWRITE THESE AS MONGODB THINGIES. WATCH VIDEO THEN DO!
 router.route('./trucks')
+  .get(function(request, response) {
+  	Truck.distinct('foodType', function (error, results){});
+  })
+  //see other lines from slack
   .get(function (request, response) {
-    var truckList = trucks.getTrucks();
-    response.send(truckList);
+    Truck.find(function (error, results) {
+      if (error) {
+        response.status(500).send(error);
+      } else {
+        response.send(results);
+      }
+    });
   })
   .post(function (request, response) {
-    var truckList = trucks.addTruck;
-    response.send(truckList);
+    var truck = new Truck(request.body);
+
+    truck.save(function (error, book) {
+      if (error) {
+        response.status(500).send(error);
+      } else {
+        response.status(201).send(book);
+      }
+    });
   });
 
 router.route('./trucks/:name')
   .get(function (request, response) {
-    var truck = trucks.getTruck(request.params.name);
-    response.send(truck);
-  })
-  .delete(function (request, response) {
-    var truckList = trucks.removeTruck();
-    response.send(truckList);
+     var truckId = request.params.truckId;
+
+     Truck.findById(truckId, function (error, result) {
+      if (error) {
+        response.status(500).send(error);
+      } else {
+        response.send(result);
+      }
+    });
   });
 
 router.route('/food-types')
-  .get(function (request, response){
+  Truck.distinct('foodType', function (error, results) {
     var foodList = trucks.getFoodTypes();
-    response.send(foodList);
+    if (error) {
+        response.status(500).send(error);
+      } else {
+        response.send(foodList);
+      }  
   });
-  
+ 
 router.route('/food-types/:type')
-  .get( function (request, response){
+  Truck.find({ foodType: { $in: [foodType] } }, function (error, results) {
     var type = request.params.type;
     var truckList = trucks.filterTrucksByFoodType(type);
-    response.send(truckList);
+    if (error) {
+      response.status(500).send(error);
+    } else {
+      response.send(truckList);
+    }
   });
+
 
 
 module.exports = router;

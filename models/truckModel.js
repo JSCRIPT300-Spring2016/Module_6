@@ -3,16 +3,7 @@
 // name your model 'Truck' (see the example in the slide deck for 'Book')
 // this is to match the name of the collection the data was imported into
 
-// var foodTruckSchema = new Schema({
-//  name: String,
-//  foodType: [String],
-//  schedule: [String],
-//  payment: [String],
-//  description: String,
-//  website: String,
-//  Facebook: String,
-//  Twitter: String
-// });
+
 
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
