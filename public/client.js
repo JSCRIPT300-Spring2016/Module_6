@@ -8,7 +8,9 @@ $(function () {
     var list = [];
     if (truckList) {
       truckList.forEach(function (truck) {
-        list.push('<li><li><span class="delete_link" data-truck="' + truck._id + '">X</span><a href="/trucks/' + truck._id + '">' + truck.name + '</a></li>');
+        list.push('<li><li><span class="delete_link" data-truck="'
+          + truck._id + '">X</span><a href="/trucks/' + truck._id +
+           '">' + truck.name + '</a></li>');
       });
       $('.trucks-list').append(list);
     }
@@ -27,7 +29,9 @@ $(function () {
     })
     .done(function (truck) {
       var list = [];
-      list.push('<li><span class="delete_link" data-truck="' + truck._id + '">X</span><a href="/trucks/' + truck._id + '">' + truck.name + '</a></li>');
+      list.push('<li><span class="delete_link" data-truck="' + truck._id +
+        '">X</span><a href="/trucks/' + truck._id + '">' +
+        truck.name + '</a></li>');
       $('.trucks-list').append(list);
       $form.trigger('reset');
     });
@@ -80,7 +84,7 @@ $(function () {
       addFoodType($(this).val());
     }
   });
-
+  /* eslint-disable no-unused-vars */
   $('#addFoodType').on('click', function (e) {
     var foodType = $('[name=type]').val();
 
@@ -96,10 +100,10 @@ $(function () {
       return false;
     }
     var $target = $(e.currentTarget);
-
+  /* eslint-enable no-unused-vars */
     $.ajax({
       method: 'DELETE',
-      url: '/trucks/' + $target.data('truck'),
+      url: '/trucks/' + $target.data('truck')
     })
     .done(function () {
       $target.closest('li').remove();

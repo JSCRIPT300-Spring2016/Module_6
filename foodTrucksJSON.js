@@ -1,4 +1,7 @@
+
 db.trucks.insert([
+
+/* eslint-disable max-len */
   {
     name: '314 PIE',
     foodType: ['Sweet and Savory Pies', 'Pie', 'Sweets'],
@@ -425,7 +428,7 @@ db.trucks.insert([
     payment: [],
     description: '',
     website: '',
-    Facebook: '', 
+    Facebook: '',
     Twitter: ''
   },
   {
@@ -505,7 +508,7 @@ db.trucks.insert([
     payment: ['Cash', 'Cards'],
     description: 'Traditional Oaxacan Mexican',
     website: '',
-    Facebook: '', 
+    Facebook: '',
     Twitter: ''
   },
   {
@@ -599,3 +602,4 @@ db.trucks.insert([
     Twitter: 'https://twitter.com/fticecream'
   }
 ]);
+/* eslint-enable max-len */
