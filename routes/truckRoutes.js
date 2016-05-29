@@ -1,7 +1,6 @@
-<<<<<<< HEAD
 var express = require('express');
 var bodyParser = require('body-parser');
-var urlEncoded = bodyParser.urlencoded({ extend: false });
+var urlEncoded = bodyParser.urlencoded({ extended: false });
 var router = express.Router();
 var Truck = require('../models/truckModel');
 
@@ -75,7 +74,3 @@ router.route('/food-types/:food')
 
 
 module.exports = router;
-
-
-=======
->>>>>>> 47600a1c1a52a2c8c6b598047badf8e2d224f9c9
