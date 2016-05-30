@@ -24,15 +24,15 @@ router.route('/')
       if (error) {
         response.status(500).send(error);
       } else {
-        response.status(201);
+        response.send(result);
       }
     });
   });
 
-router.route('/:name')
+router.route('/:id')
   .get(function(request, response) {
-    var truckName = request.params.name;
-    Truck.find(truckName, 'name', function (error, results) {
+    var truckId = request.params.id;
+    Truck.findById(truckId, function (error, results) {
       if (error) {
         response.status(500).send(error);
       } else {
@@ -41,7 +41,7 @@ router.route('/:name')
     });
   })
   .delete(function(request, response) {
-    Truck.findOneAndRemove({ name: request.params.name }, function (error, results) {
+    Truck.findByIdAndRemove({ _id: request.params.id }, function (error, results) {
       if (error) {
         response.status(500).send(error);
       } else {
