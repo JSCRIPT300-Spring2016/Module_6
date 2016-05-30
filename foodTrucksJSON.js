@@ -1,10 +1,12 @@
+// eslint-disable-next-line
 db.trucks.insert([
   {
     name: '314 PIE',
     foodType: ['Sweet and Savory Pies', 'Pie', 'Sweets'],
     schedule: ['Monday', 'Wednesday', 'Thursday'],
     payment: ['Cash', 'Cards'],
-    description: 'We love pies - sweet and savory. We serve them up to the hungry people in Seattle in our fabulous food truck',
+    description: 'We love pies - sweet and savory. We serve them up to the \
+      hungry people in Seattle in our fabulous food truck',
     website: 'http://www.314pieseattle.com',
     Facebook: 'https://www.facebook.com/pages/314-PIE/341309415945288',
     Twitter: 'https://twitter.com/314PIESeattle'
@@ -53,7 +55,8 @@ db.trucks.insert([
     foodType: ['Sweets'],
     schedule: ['Wednesday', 'Thursday'],
     payment: ['Cash', 'Cards'],
-    description: 'Serving up delicious whoopie pies, cakes, pies, bars, brownies, truffles, and cookies from Bertha Mae, our bakery-on-wheels',
+    description: 'Serving up delicious whoopie pies, cakes, pies, bars, brownies, \
+      truffles, and cookies from Bertha Mae, our bakery-on-wheels',
     website: 'http://www.bakemydayseattle.com/',
     Facebook: 'https://www.facebook.com/bakemydayseattle',
     Twitter: 'https://twitter.com/BMDSeattle'
@@ -63,7 +66,8 @@ db.trucks.insert([
     foodType: ['Sweets'],
     schedule: ['Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday'],
     payment: ['Cash', 'Cards'],
-    description: 'Ice creams and sorbets that are intensely flavored and as locally sourced and seasonal as possible without sacrificing taste or texture. All from a fetching cart.',
+    description: 'Ice creams and sorbets that are intensely flavored and as locally sourced and \
+      seasonal as possible without sacrificing taste or texture. All from a fetching cart.',
     website: 'http://www.balleywoodcreamery.com/',
     Facebook: 'https://www.facebook.com/balleywoodcreamery',
     Twitter: ''
@@ -73,7 +77,8 @@ db.trucks.insert([
     foodType: ['Northwest Cuisine'],
     schedule: [],
     payment: ['Cash', 'Cards'],
-    description: 'Offsite catering from Barking Frog is hitting the road in style to satisfy your Grand Marnier Prawn craving by bringing (your favorite) gourmet eats to the streets!',
+    description: 'Offsite catering from Barking Frog is hitting the road in style to satisfy \
+      your Grand Marnier Prawn craving by bringing (your favorite) gourmet eats to the streets!',
     website: 'http://barkingfrogrestaurant.com',
     Facebook: 'https://www.facebook.com/BarkingFrogMobileKitchen',
     Twitter: 'https://twitter.com/BarkingFrogMK'
@@ -83,7 +88,8 @@ db.trucks.insert([
     foodType: ['Mexican'],
     schedule: ['Monday'],
     payment: ['Cash', 'Cards'],
-    description: 'Barriga Llena was the first vendor to introduce traditional Mexican tortas to Seattle, just the way you have them in Mexico City',
+    description: 'Barriga Llena was the first vendor to introduce traditional Mexican tortas to \
+      Seattle, just the way you have them in Mexico City',
     website: 'http://www.labarrigallena.com',
     Facebook: 'https://www.facebook.com/barrigallenaseattle',
     Twitter: 'https://twitter.com/barrigallena'
@@ -143,7 +149,8 @@ db.trucks.insert([
     foodType: ['Fillipino/American', 'Fillipino'],
     schedule: [],
     payment: ['Cash', 'Cards'],
-    description: 'Bring people together using their sense of Filipino cuisine in a unique and flavorful way',
+    description: 'Bring people together using their sense of Filipino cuisine in a unique and \
+      flavorful way',
     website: '',
     Facebook: 'https://www.facebook.com/bigboysfilipinofoodtruck',
     Twitter: 'https://twitter.com/NateVibez'
@@ -173,7 +180,8 @@ db.trucks.insert([
     foodType: ['BBQ'],
     schedule: [],
     payment: [],
-    description: 'All of Big House BBQ\'s meats are slow smoked using seasoned apple wood, and alter from the Great Northwest because LOW and SLOW is the only way to go.',
+    description: 'All of Big House BBQ\'s meats are slow smoked using seasoned apple wood, \
+      and alter from the Great Northwest because LOW and SLOW is the only way to go.',
     website: 'http://www.bighousebbq.net',
     Facebook: '',
     Twitter: ''
@@ -183,7 +191,8 @@ db.trucks.insert([
     foodType: ['Sweets'],
     schedule: ['Monday', 'Tuesday'],
     payment: ['Cash', 'Cards'],
-    description: 'Hand made ice cream, ice cream sandwiches, and floats in the summer, hearty soups and stews in the cold, rainy months',
+    description: 'Hand made ice cream, ice cream sandwiches, and floats in the summer, hearty \
+      soups and stews in the cold, rainy months',
     website: 'http://bigspoonseattle.com',
     Facebook: 'https://www.facebook.com/pages/Big-Spoon/458061400937758',
     Twitter: 'https://twitter.com/bigspoonseattle'
@@ -203,7 +212,8 @@ db.trucks.insert([
     foodType: ['Chinese Crepes'],
     schedule: ['Tuesday'],
     payment: ['Cash', 'Cards'],
-    description: 'Chinese crepes, also known at jiangbing are a delicious traditional Chinese street snack',
+    description: 'Chinese crepes, also known at jiangbing are a delicious traditional Chinese \
+      street snack',
     website: 'http://www.bingoffire.com',
     Facebook: 'https://www.facebook.com/pages/Bing-of-Fire/502888773079831',
     Twitter: 'https://twitter.com/BingofFire'
@@ -223,7 +233,8 @@ db.trucks.insert([
     foodType: ['Dessert'],
     schedule: [],
     payment: ['Cash', 'Cards'],
-    description: 'Cupcakes, Gelato and Pastry Truck serving curbside throughout King, Snohomish, Skagit Counties in Wa.',
+    description: 'Cupcakes, Gelato and Pastry Truck serving curbside throughout King, Snohomish, \
+      Skagit Counties in Wa.',
     website: 'http://www.Bitemecupcakes.us',
     Facebook: 'https://www.facebook.com/pages/Bite-Me-Cupcakes-Eatery/210398125665053',
     Twitter: ''
@@ -293,7 +304,8 @@ db.trucks.insert([
     foodType: ['Sweets'],
     schedule: [],
     payment: [],
-    description: 'Events and festivals, and parked at their building near the Tacoma Dome before and after concerts and Dome events',
+    description: 'Events and festivals, and parked at their building near the Tacoma Dome \
+      before and after concerts and Dome events',
     website: '',
     Facebook: 'https://www.facebook.com/celebritycakestudio',
     Twitter: ''
@@ -353,7 +365,8 @@ db.trucks.insert([
     foodType: ['Asian Fusion'],
     schedule: ['Tuesday', 'Wednesday', 'Thursday'],
     payment: ['Cash', 'Cards'],
-    description: 'Asian Fusion, like the truck\'s name Chopstix. Our specialty is a little twist of Asian cuisine with western cuisine',
+    description: 'Asian Fusion, like the truck\'s name Chopstix. Our specialty is a little twist \
+      of Asian cuisine with western cuisine',
     website: 'http://www.chopstixmobile.com',
     Facebook: 'https://www.facebook.com/chopstixmobile',
     Twitter: 'https://twitter.com/ChopstixMobile'
@@ -373,7 +386,8 @@ db.trucks.insert([
     foodType: ['Coffee'],
     schedule: ['Wednesday', 'Saturday', 'Sunday'],
     payment: ['Cash', 'Cards'],
-    description: 'A bike-driven mobile coffee stand bringing manually-brewed specialty coffee to Seattle streets, previously Handlebar Coffee',
+    description: 'A bike-driven mobile coffee stand bringing manually-brewed specialty coffee to \
+      Seattle streets, previously Handlebar Coffee',
     website: 'http://instagram.com/convoycoffee',
     Facebook: 'https://www.facebook.com/convoycoffee',
     Twitter: 'https://twitter.com/convoycoffee'
@@ -413,7 +427,8 @@ db.trucks.insert([
     foodType: ['French'],
     schedule: ['Tuesday', 'Friday'],
     payment: ['Cash', 'Cards'],
-    description: 'Savory and sweet crepes; breakfast, lunch and dinner; hot coffee and espresso drinks',
+    description: 'Savory and sweet crepes; breakfast, lunch and dinner; hot coffee and espresso \
+      drinks',
     website: 'http://cremacreperie.com',
     Facebook: 'https://www.facebook.com/pages/Crema-Creperie-Espresso-Bar/303099846462139',
     Twitter: ''
@@ -425,7 +440,7 @@ db.trucks.insert([
     payment: [],
     description: '',
     website: '',
-    Facebook: '', 
+    Facebook: '',
     Twitter: ''
   },
   {
@@ -505,7 +520,7 @@ db.trucks.insert([
     payment: ['Cash', 'Cards'],
     description: 'Traditional Oaxacan Mexican',
     website: '',
-    Facebook: '', 
+    Facebook: '',
     Twitter: ''
   },
   {
@@ -523,7 +538,8 @@ db.trucks.insert([
     foodType: ['Mexican'],
     schedule: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
     payment: ['Cash', 'Cards'],
-    description: 'Specializing in Gourmet Tortas, Tacos, Tamales (on green banana leaf) and Quesadillas',
+    description: 'Specializing in Gourmet Tortas, Tacos, Tamales (on green banana leaf) and \
+      Quesadillas',
     website: 'http://www.elsabrosodeseattle.com',
     Facebook: 'https://www.facebook.com/elsabrosobeaconhill',
     Twitter: ''
@@ -563,7 +579,8 @@ db.trucks.insert([
     foodType: ['Mexican'],
     schedule: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
     payment: ['Cash'],
-    description: 'Regular taco truck in the Fremont neighborhood - open 7 days a week and late night',
+    description: 'Regular taco truck in the Fremont neighborhood - open 7 days a week and \
+      late night',
     website: '',
     Facebook: 'https://www.facebook.com/pages/Flair-Taco/197832600252403',
     Twitter: ''
@@ -573,7 +590,8 @@ db.trucks.insert([
     foodType: ['Hot Dogs'],
     schedule: ['Monday', 'Sunday'],
     payment: ['Cash', 'Cards'],
-    description: 'Gourmet hot dogs, weiners, sausages, hot links and more, contact at 425.761.9447 or franksfranks3@gmail.com',
+    description: 'Gourmet hot dogs, weiners, sausages, hot links and more, contact at \
+      425.761.9447 or franksfranks3@gmail.com',
     website: '',
     Facebook: 'https://www.facebook.com/franksfrankshotdogs',
     Twitter: ''
@@ -583,7 +601,8 @@ db.trucks.insert([
     foodType: ['Sweets'],
     schedule: ['Sunday'],
     payment: ['Cash', 'Cards'],
-    description: 'Fruit Chatter Box provides fresh, seasonal fresh fruit in cups or on a stick at local festivals and street fairs.',
+    description: 'Fruit Chatter Box provides fresh, seasonal fresh fruit in cups or on a stick \
+      at local festivals and street fairs.',
     website: '',
     Facebook: 'https://www.facebook.com/fruitchatterbox',
     Twitter: 'https://twitter.com/fruitchatterbox'

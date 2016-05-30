@@ -26,7 +26,7 @@ module.exports = {
 		],
 		"max-len": [
 			"error",
-			80, 2,
+			100, 2,
 			{"ignoreUrls": true,
   		"ignoreComments": true}
 		],
@@ -51,7 +51,7 @@ module.exports = {
 			"error"
 		],
 		"no-unused-vars": [
-			"error"
+			"warn"
 		],
 		"strict": [
 			"error",
