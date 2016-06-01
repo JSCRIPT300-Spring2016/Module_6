@@ -16,21 +16,11 @@ var Truck = require('../models/truckModel');
 var app = express();
 var db = mongoose.connect('mongodb://localhost/foodTruckAPI');
 
-var foodTrucks = require('../trucks');
-
 var router = express.Router();
 
-var trucks = require('../trucks');
-var foodTypes = require('../trucks');
-var openTrucks = require('../trucks');
-var typeTrucks = require('../trucks');
 /* eslint-enable no-undef */
 
 // var serveStatic = express.static('public');
-
-// var openTruck = trucks.filterTrucksByDay('Saturday');
-// var pizzaTruckList = trucks.filterTrucksByFoodType('pizza');
-// var addTruck = trucks.addTruck();
 
 /* eslint-disable no-console */
 
@@ -60,9 +50,9 @@ router.route('/')
 // `/trucks/:name` This route returns a single truck object that matches
 // the name parameter passed in the route.
 // http://127.0.0.1:3000/trucks:Fez
-router.route('/:name')
+router.route('/:id')
 .get(function (request, response) {
-  Truck.findById(request.params.name, function (error, trucks) {
+  Truck.findById(request.params.id, function (error, trucks) {
     if(error) {
       response.status(500).send(error);
     } else {
@@ -87,16 +77,18 @@ router.route('/:name')
     if (error) {
       response.status(500).send(error);
     } else {
-      response.sendStatus(204).send(truck);
+      response.sendStatus(204);
+      response.end(truck);
     }
   });
 })
 .delete(function(request, response) {
-  Truck.findByIdAndRemove(request.params.name, function (error) {
+  Truck.findByIdAndRemove(request.params.id, function (error) {
     if (error) {
       response.status(500).send(error);
     } else {
-      response.sendStatus(204).send('removed');
+      response.sendStatus(204);
+      response.end('removed');
     }
   });
 });
