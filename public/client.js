@@ -18,11 +18,12 @@ $(function () {
 
     e.preventDefault();
     var $form = $(this);
+    var data = $form.serialize() + serializeFoodTypes();
 
     $.ajax({
       method: 'POST',
       url: '/trucks',
-      data: $form.serialize()
+      data: data
     })
     .done(function (truck) {
       var list = [];
@@ -31,6 +32,16 @@ $(function () {
       $form.trigger('reset');
     });
   });
+
+  function serializeFoodTypes() {
+    var typeString = '';
+
+    $('.foodType-list li').each(function (index, item) {
+      typeString += '&foodType=' + item.innerText;
+    });
+
+    return typeString;
+  }
 
   function getPaymentTypes() {
     var types = [];
