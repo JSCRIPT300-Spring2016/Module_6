@@ -42,7 +42,7 @@ router.route('/')
       } else {
 
             //yay saved
-        response.status.send(newFoodTruck);
+        response.status(201).send(newFoodTruck);
       }
   });
 });
@@ -50,8 +50,8 @@ router.route('/')
 router.route('/:name')
 .get(function (request, response) {
 
-    //find the food truck
-  foodTruck.find({ name: request.params.name }, function (err, result) {
+    //find the food truck, changing to _id (used to be name)
+  foodTruck.find({ _id: request.params.name }, function (err, result) {
     if (err) {
 
             //sorry no truck
