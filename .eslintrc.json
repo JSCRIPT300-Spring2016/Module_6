@@ -1,0 +1,58 @@
+{
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "globals": {
+        "module": true,
+        "result": true,
+        "round": true,
+        "google": true
+    },
+    "rules": {
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "always"
+        ],
+        "no-undef": [
+            "error"
+        ],
+        "strict": [
+            "error",
+            "global"
+        ],
+        "comma-dangle": [
+            "error"
+        ],
+        "max-len": [
+            "error",
+            280,
+            2,
+            {"ignoreUrls": true}
+        ],
+        "no-trailing-spaces": [
+            "error"
+        ],
+        "curly": [
+            "error"
+        ],
+        "newline-before-return": [
+            "error"
+        ],
+        "eqeqeq": [
+            "error"
+        ]
+    }
+}
